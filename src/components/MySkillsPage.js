@@ -51,8 +51,10 @@ const Main = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 80vw; /* Full width on smaller screens */
+    width: 50vw;
     height: auto;
+    margin-left: 50px;
+    margin-top: 45px;
     margin-bottom: 2rem;
   }
 `
@@ -155,7 +157,7 @@ const MySkillsPage = () => {
                     <Description>
                         <strong>Skills</strong>
                         <p>
-                            React.js, Next.js, HTML, CSS, Tailwind CSS, Styled Components
+                            React.js, Next.js, HTML, CSS, Tailwind CSS, Bootstrap, Styled Components
                         </p>
                     </Description>
 
