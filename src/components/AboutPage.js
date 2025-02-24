@@ -76,7 +76,7 @@ const AboutPage = () => {
                     <br />
                     I am a Software Engineer with a strong focus on Frontend Development, specializing in React.js, JavaScript, and modern web technologies. With experience in building scalable and high-performance web applications, I am passionate about crafting seamless and user-friendly digital experiences.
 
-                    I continuously expand my knowledge by solving LeetCode problems and studying design patterns, ensuring that I write clean, efficient, and maintainable code.
+                    I continuously expand my knowledge by solving LeetCode problems ensuring that I write clean, efficient, and maintainable code.
                 </Main>
 
                 <BigTitle text="ABOUT ME" top="10%" left="5%" />

@@ -23,6 +23,14 @@ const Box = styled(motion.a)`
     background-color: ${(props) => props.theme.text};
     transition: all 0.3s ease;
   }
+
+  @media (max-width: 768px) {
+    width: 65vw;
+    height: full;
+    margin-left: 55%;
+    margin-top: 45px;
+    margin-bottom: 2rem;
+  }
 `;
 
 const Image = styled.div`
