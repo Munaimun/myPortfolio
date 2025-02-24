@@ -140,12 +140,13 @@ const Main = () => {
                 <LogoComponent theme={click ? 'dark' : 'light'} />
                 <SocialIcons theme={click ? 'dark' : 'light'} />
 
+                {/* rotating logo */}
                 <Center click={click}>
                     <YinYang onClick={() => handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
                     <span>click here</span>
                 </Center>
 
-                <Contact target="_blank" href="mailto:codebucks27@gmail.com">
+                <Contact target="_blank" href="mailto:munaimunz@gmail.com">
                     <motion.h2
                         initial={{
                             y: -200,
@@ -162,6 +163,7 @@ const Main = () => {
                         Say hi..
                     </motion.h2>
                 </Contact>
+
                 <BLOG to="/blog">
                     <motion.h2
                         initial={{
@@ -178,6 +180,7 @@ const Main = () => {
                         Blog
                     </motion.h2>
                 </BLOG>
+
                 <WORK to="/work" click={+click}>
                     <motion.h2
                         initial={{
@@ -191,9 +194,10 @@ const Main = () => {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
-                        Work
+                        Projects
                     </motion.h2>
                 </WORK>
+
                 <BottomBar>
                     <ABOUT to="/about" click={+click}>
                         <motion.h2

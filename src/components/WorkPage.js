@@ -23,7 +23,7 @@ const Box = styled.div`
 
 const Main = styled(motion.ul)`
   position: fixed;
-  top: 12rem;
+  top: 7rem;
   left: calc(10rem + 15vw);
   height: 40vh;
   display: flex;
@@ -89,7 +89,9 @@ const WorkPage = () => {
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
 
-        <BigTitlte text="WORK" top="10%" right="20%" />
+        <BigTitlte text="WORK" top="1%" right="10%" />
+
+        <BigTitlte text="scroll" top="40%" right="73%" />
       </Box>
     </ThemeProvider>
   );
