@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-import {lightTheme} from './Themes';
-import { Design, Develope} from './AllSvgs';
+import { lightTheme } from './Themes';
+import { Design, Develope } from './AllSvgs';
 
 
 import LogoComponent from '../subComponents/LogoComponent';
@@ -11,38 +11,52 @@ import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitlte'
 
 const Box = styled.div`
-background-color: ${props => props.theme.body};
-width: 100vw;
-height:100vh;
-position: relative;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
+  background-color: ${props => props.theme.body};
+  width: 100vw;
+  min-height: 100vh; /* Allows scrolling */
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  overflow-y: auto;
 
-
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 `
 
 const Main = styled.div`
-border: 2px solid ${props => props.theme.text};
-color: ${props => props.theme.text};
-background-color: ${props => props.theme.body};
-padding: 2rem;
-width: 30vw;
-height: 60vh;
-z-index:3;
-line-height: 1.5;
-cursor: pointer;
+  border: 2px solid ${props => props.theme.text};
+  color: ${props => props.theme.text};
+  background-color: ${props => props.theme.body};
+  padding: 2rem;
+  width: 30vw;
+  height: 60vh;
+  z-index: 3;
+  line-height: 1.5;
+  cursor: pointer;
 
-font-family: 'Ubuntu Mono',monospace;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+  font-family: 'Ubuntu Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-&:hover{
+  &:hover {
     color: ${props => props.theme.body};
     background-color: ${props => props.theme.text};
-}
+  }
+
+  @media (max-width: 768px) {
+    width: 80vw; /* Full width on smaller screens */
+    height: auto;
+    margin-bottom: 2rem;
+  }
 `
+
 
 const Title = styled.h2`
 display: flex;
@@ -85,69 +99,90 @@ ul,p{
 const MySkillsPage = () => {
     return (
         <ThemeProvider theme={lightTheme}>
-<Box>
+            <Box>
 
-<LogoComponent theme='light'/>
-<SocialIcons theme='light'/>
-<PowerButton />
-<ParticleComponent theme='light' />
-            <Main>
-<Title>
-    <Design width={40} height={40} /> Designer
-</Title>
-<Description>
-I love to create design which speaks, Keep it clean, minimal and simple.
-</Description>
-<Description>
-<strong>I like to Design</strong>
-<ul>
-    <li>
-        Web Design
-    </li>
-    <li>
-        Mobile Apps
-    </li>
-</ul>
-</Description>
-<Description>
-<strong>Tools</strong>
-<ul>
-    <li>
-       Figma
-    </li>
-    
-</ul>
-</Description>
+                <LogoComponent theme='light' />
+                <SocialIcons theme='light' />
+                <PowerButton />
+                <ParticleComponent theme='light' />
+                <Main>
+                    <Title>
+                        Experties
+                    </Title>
 
-            </Main>
-            <Main>
-<Title>
-    <Develope width={40} height={40} /> Frontend Developer
-</Title>
-<Description>
-I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
-</Description>
-<Description>
-<strong>Skills</strong>
-<p>
-Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
-</p>
-</Description>
-<Description>
-<strong>Tools</strong>
-<p>
-VScode, Github, Codepen etc.
-</p>
-</Description>
+                    <Description>
+                        I love to write code that is clear, simple, and powerful.
+                    </Description>
 
-            </Main>
+                    <Description>
+                        <strong>Languages</strong>
+                        <ul>
+                            <li>
+                                JavaScript, TypeScript, Python
+                            </li>
+                        </ul>
+                    </Description>
 
-            <BigTitle text="SKILLS" top="80%" right="30%" />
+                    <Description>
+                        <strong>Databases</strong>
+                        <ul>
+                            <li>
+                                MySQL, Firebase, MongoDB
+                            </li>
+                        </ul>
+                    </Description>
 
-        </Box>
+                    <Description>
+                        <strong>Problem Solving</strong>
+                        <ul>
+                            <li>
+                                <a href='https://github.com/Munaimun/Problem_Solving' target='block'>LeetCode</a>
+                            </li>
+
+                        </ul>
+                    </Description>
+
+                </Main>
+
+
+                <Main>
+                    <Title>
+                        <Develope width={40} height={40} /> Frontend Developer
+                    </Title>
+                    {/* <Description>
+                        I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
+                    </Description> */}
+                    <Description>
+                        <strong>Skills</strong>
+                        <p>
+                            React.js, Next.js, HTML, CSS, Tailwind CSS, Styled Components
+                        </p>
+                    </Description>
+
+                    <Description>
+                        <strong>Backend</strong>
+                        <p>
+                            REST APIs, Node.js(basic)
+                        </p>
+                    </Description>
+
+
+                    <Description>
+                        <strong>Tools & Platforms</strong>
+                        <p>
+                            Context API, Redux, Git, GitHub, Jira, Figma
+                        </p>
+                    </Description>
+
+
+                </Main>
+
+                <BigTitle text="SKILLS" top="80%" right="30%" />
+
+            </Box>
 
         </ThemeProvider>
-        
+
     )
 }
 

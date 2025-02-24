@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes, ThemeProvider } from 'styled-components'
-import {DarkTheme} from './Themes';
+import { DarkTheme } from './Themes';
 
 
 import LogoComponent from '../subComponents/LogoComponent';
@@ -34,7 +34,7 @@ img{
     height: auto;
 }
 `
-const Main =  styled.div`
+const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   padding: 2rem;
@@ -61,31 +61,31 @@ const Main =  styled.div`
 const AboutPage = () => {
     return (
         <ThemeProvider theme={DarkTheme}>
-<Box>
+            <Box>
 
-<LogoComponent theme='dark'/>
-<SocialIcons theme='dark'/>
-<PowerButton />
-<ParticleComponent theme='dark' />
+                <LogoComponent theme='dark' />
+                <SocialIcons theme='dark' />
+                <PowerButton />
+                <ParticleComponent theme='dark' />
 
-        <Spaceman>
-            <img src={astronaut} alt="spaceman" />
-        </Spaceman>    
-        <Main>
-        I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
-<br /> <br/>
-I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
-<br/> <br/>
-I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
-        </Main>
+                <Spaceman>
+                    <img src={astronaut} alt="spaceman" />
+                </Spaceman>
+                <Main>
+                    Software Engineer | Frontend-Focused | React Enthusiast
+                    <br />
+                    I am a Software Engineer with a strong focus on Frontend Development, specializing in React.js, JavaScript, and modern web technologies. With experience in building scalable and high-performance web applications, I am passionate about crafting seamless and user-friendly digital experiences.
 
-        <BigTitle text="ABOUT" top="10%" left="5%" />
+                    I continuously expand my knowledge by solving LeetCode problems and studying design patterns, ensuring that I write clean, efficient, and maintainable code.
+                </Main>
+
+                <BigTitle text="ABOUT ME" top="10%" left="5%" />
 
 
-        </Box>
+            </Box>
 
         </ThemeProvider>
-        
+
     )
 }
 

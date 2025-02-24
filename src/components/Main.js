@@ -6,6 +6,7 @@ import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 import { YinYang } from './AllSvgs'
+import signature from "../assets/svg/Signature.svg"
 import Intro from './Intro'
     ;
 
@@ -104,7 +105,7 @@ align-items: center;
 transition: all 1s ease;
 
 &>:first-child{
-    animation: ${rotate} infinite 1.5s linear;
+    animation: ${rotate} infinite 4s linear;
 }
 
 &>:last-child{
@@ -142,7 +143,7 @@ const Main = () => {
 
                 {/* rotating logo */}
                 <Center click={click}>
-                    <YinYang onClick={() => handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
+                    <img src={signature} onClick={() => handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
                     <span>click here</span>
                 </Center>
 
@@ -215,6 +216,7 @@ const Main = () => {
                             About.
                         </motion.h2>
                     </ABOUT>
+
                     <SKILLS to="/skills">
                         <motion.h2
                             initial={{
