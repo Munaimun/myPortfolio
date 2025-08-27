@@ -72,11 +72,13 @@ const AboutPage = () => {
                     <img src={astronaut} alt="spaceman" />
                 </Spaceman>
                 <Main>
-                    Software Engineer | Frontend-Focused | React Enthusiast
+                    Software Engineer | React Enthusiast
                     <br />
-                    I am a Software Engineer with a strong focus on Frontend Development, specializing in React.js, JavaScript, and modern web technologies. With experience in building scalable and high-performance web applications, I am passionate about crafting seamless and user-friendly digital experiences.
+                    I am a Software Engineer with expertise in Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP), and core software engineering principles.
 
-                    I continuously expand my knowledge by solving LeetCode problems ensuring that I write clean, efficient, and maintainable code.
+                    I actively enhance my problem-solving skills on platforms like LeetCode and CodeChef, while continuously expanding my knowledge of system design, databases, and software development best practices.
+
+                    Driven by curiosity and a passion for learning, I am committed to building scalable, efficient, and impactful digital solutions.
                 </Main>
 
                 <BigTitle text="ABOUT ME" top="10%" left="5%" />
