@@ -29,13 +29,11 @@ const Box = styled(motion.a)`
     height: full;
     margin-left: 55%;
     margin-top: 45px;
-    margin-bottom: 2rem;
   }
 `;
 
 const Image = styled.div`
   background-image: ${(props) => `url(${props.img})`};
-  width: 100%;
   height: 60%;
   background-size: cover;
   border: 1px solid transparent;

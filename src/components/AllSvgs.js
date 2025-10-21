@@ -17,6 +17,51 @@ export const PowerBtn = (props) => {
   )
 }
 
+export const Codeforces = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      {...props}
+    >
+      <path
+        fill={props.fill}
+        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 64c48.5 0 88 39.5 88 88s-39.5 88-88 88-88-39.5-88-88 39.5-88 88-88zm0 288c-56.5 0-107.6-30.6-134-76 24-40 68-68 122-68s98 28 122 68c-26.4 45.4-77.5 76-134 76z"
+      />
+    </svg>
+  );
+};
+
+export const CodeChef = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      {...props}
+    >
+      <path
+        fill={props.fill}
+        d="M256 0C114.62 0 0 114.62 0 256s114.62 256 256 256 256-114.62 256-256S397.38 0 256 0zm0 48c114.87 0 208 93.13 208 208s-93.13 208-208 208S48 370.87 48 256 141.13 48 256 48z"
+      />
+    </svg>
+  );
+};
+
+export const LeetCode = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      {...props}
+    >
+      <path
+        fill={props.fill}
+        d="M400 128l-96 96-64-64 96-96 64 64zm-192 192l64 64-96 96-64-64 96-96zm112 16c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48z"
+      />
+    </svg>
+  );
+};
+
 export const Github = (props) => {
   return (
     <svg

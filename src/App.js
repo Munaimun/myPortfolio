@@ -21,10 +21,10 @@ function App() {
       <ThemeProvider theme={lightTheme}>
         <SoundBar />
 
+
         {/* For framer-motion animation on page change! */}
         {/* Changed prop from exitBefore to mode */}
         <AnimatePresence mode='wait'>
-          {/* Changed Switch to Routes */}
 
           <Routes key={location.pathname} location={location} >
             {/* Changed component to element */}

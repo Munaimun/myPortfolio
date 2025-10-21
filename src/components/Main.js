@@ -7,6 +7,9 @@ import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 // import { YinYang } from './AllSvgs'
 import signature from "../assets/svg/Signature.svg"
+import leetcode from "../assets/Images/LeetCode_Logo_black_with_text.svg"
+import codeforces from "../assets/Images/Codeforces_logo.svg"
+import codechef from "../assets/Images/CodeChef_Logo.svg"
 import Intro from './Intro'
 
 
@@ -124,6 +127,34 @@ height: ${props => props.click ? '100%' : '0%'};
 z-index:1;
 transition: height 0.5s ease, width 1s ease 0.5s;
 `
+const Profiles = styled.div`
+  position: absolute;
+  top: 3rem;
+  left: 11rem; // adjust based on the 4-line menu
+  display: flex;
+  gap: 1rem;
+  z-index: 1;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    // gap: 0.5rem;
+    color: ${props => props.theme.text};
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+
+    img {
+      width: 70px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3s ease;
+    }
+  }
+`
 
 
 const Main = () => {
@@ -135,6 +166,44 @@ const Main = () => {
     return (
         <MainContainer>
             <DarkDiv click={click} />
+
+            <Profiles>
+                <motion.a
+                    href="https://leetcode.com/munaimun"
+                    target="_blank"
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1, transition: { type: 'spring', duration: 1.5, delay: 1.2 } }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    <img src={leetcode} alt="LeetCode" />
+                </motion.a>
+
+                <motion.a
+                    href="https://codeforces.com/profile/munaimun_1948"
+                    target="_blank"
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1, transition: { type: 'spring', duration: 1.5, delay: 1.4 } }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    <img src={codeforces} alt="Codeforces" />
+                </motion.a>
+
+                <motion.a
+                    href="https://www.codechef.com/users/bruce_wayne23"
+                    target="_blank"
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1, transition: { type: 'spring', duration: 1.5, delay: 1.6 } }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    <img src={codechef} alt="CodeChef" />
+                </motion.a>
+            </Profiles>
+
+
+
             <Container>
                 <PowerButton />
                 <LogoComponent theme={click ? 'dark' : 'light'} />
@@ -142,7 +211,7 @@ const Main = () => {
 
                 {/* rotating logo */}
                 <Center click={click}>
-                    <img src={signature} onClick={() => handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
+                    <img src={signature} alt='signature' onClick={() => handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
                     <span>click here</span>
                 </Center>
 
