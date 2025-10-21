@@ -6,10 +6,17 @@ Welcome to my portfolio repository! 🚀 This project showcases my skills, proje
 
 ## 🧑‍💻 About Me
 
-I am **Munaimun Bari Fahad**, a passionate **Frontend Developer** with a strong foundation in **React.js, JavaScript, and UI/UX principles**. I have experience in building dynamic web applications, integrating APIs, and optimizing performance for better user experiences.
+I am **Munaimun Bari Fahad**, a passionate Software Engineer with a strong foundation in **Frontend Developer** with a strong foundation in **React.js, JavaScript, and UI/UX principles**. I have experience in building dynamic web applications, integrating APIs, and optimizing performance for better user experiences.
 
-🔹 **Tech Stack:** React.js, Next.js, JavaScript (ES6+), Tailwind CSS, Firebase, REST APIs  
+🔹 **Languages:** C++, C, JavaScript, TypeScript
+
+🔹 **Frameworks & Libraries:** React.js, Next.js, JavaScript (ES6+), Tailwind CSS, Firebase, REST APIs
+
 🔹 **Other Skills:** Problem-Solving, Data Structures & Algorithms, Design-Patterns, UI/UX Design
+
+🔹 **Databases:** MySQL, MongoDB, Firebase
+
+🔹 **Tools & Others:** DSA, OOP, Git, GitHub, Tailwind CSS
 
 ---
 
