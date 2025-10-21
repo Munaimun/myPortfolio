@@ -130,7 +130,7 @@ transition: height 0.5s ease, width 1s ease 0.5s;
 const Profiles = styled.div`
   position: absolute;
   top: 3rem;
-  left: 11rem; // adjust based on the 4-line menu
+  left: 11rem; // you might adjust this for smaller screens
   display: flex;
   gap: 1rem;
   z-index: 1;
@@ -139,14 +139,15 @@ const Profiles = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    // gap: 0.5rem;
     color: ${props => props.theme.text};
     text-decoration: none;
     font-weight: 500;
     font-size: 12px;
 
     img {
-      width: 70px;
+      width: 100%;
+      max-width: 70px; // max size for larger screens
+      height: auto;    // maintain aspect ratio
     }
 
     &:hover {
@@ -154,7 +155,28 @@ const Profiles = styled.div`
       transition: 0.3s ease;
     }
   }
+
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    left: 2rem;
+    gap: 0.5rem;
+
+    a img {
+      max-width: 50px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    top: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    a img {
+      max-width: 40px;
+    }
+  }
 `
+
 
 
 const Main = () => {
