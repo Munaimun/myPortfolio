@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import React from 'react'
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Github } from '../components/AllSvgs';
 
@@ -12,7 +10,7 @@ height: 70vh;
 background-color: #818589;
 color:${props => props.theme.body};
 padding: 1.5rem 2rem;
-margin-right: 4rem;
+margin-right: 2rem;
 border-radius: 0 50px 0 50px;
 display: flex;
 flex-direction: column;

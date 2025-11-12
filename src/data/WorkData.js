@@ -4,6 +4,7 @@ import top_course from "../assets/project-images/topcourses.png"
 import viewfinder from "../assets/project-images/viewfinder.jpg"
 import quiz from "../assets/project-images/quiz.jpg"
 import hospital from "../assets/project-images/hospital.png"
+import restaurant from "../assets/project-images/Screenshot 2025-11-12 193031.png"
 
 // work data
 
@@ -25,15 +26,15 @@ export const Work = [
         image: intelitalk,
         tags: ["react", "tailwind", "axios"],
 
-        demo: "https://intelitalk.onrender.com/",
-        github: "https://github.com/dev-saiful/InteliTalk/tree/frontend"
+        demo: "https://iteli-talk-client.vercel.app/",
+        github: "https://github.com/Munaimun/IteliTalk-client"
 
     },
     {
         id: 3,
         name: "Top Courses - Course catalog application",
         image: top_course,
-        description: "A dynamic course catalog application that interacts with an API to fetch and display various courses.The user interface includes some category buttons for easy course filtering. Implemented a toast feature, allowing users to 'like' and receive feedback on their preferred courses instantly.",
+        description: "A dynamic course catalog application that interacts with an API to fetch and display various courses.The user interface includes some category buttons for easy course filtering.",
         tags: ["react", "REST-api", "tailwind"],
 
         demo: "https://top-courses-eight-ecru.vercel.app/",
@@ -72,5 +73,16 @@ export const Work = [
         github: "https://github.com/Munaimun/hospital_website"
 
     },
+    {
+        id: 7,
+        name: "Restaurant Website",
+        image: restaurant, // make sure to import your image at the top like: import restaurant from "../assets/project-images/restaurant.png"
+        description: "Developed a responsive restaurant website where users can explore the full menu, book tables, and place online food orders. Integrated smooth navigation, engaging UI animations, and a seamless ordering flow to enhance the dining experience.",
+        tags: ["react", "tailwind", "router-dom", "axios"],
+
+        demo: "https://assignment-gamma-virid.vercel.app/",
+        github: "https://github.com/Munaimun/Assignment"
+    },
+
 
 ] 

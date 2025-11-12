@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { DarkTheme } from "./Themes";
 import { motion } from "framer-motion";
@@ -12,24 +12,25 @@ import Card from "../subComponents/Card";
 import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";
 
+// Outer wrapper
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-
-  height: 400vh;
+  min-height: 100vh;
+  width: 100%;
   position: relative;
-  display: flex;
-  align-items: center;
+  padding: 5rem 2rem;
 `;
 
+// Grid layout for cards
 const Main = styled(motion.ul)`
-  position: fixed;
-  top: 7rem;
-  left: calc(10rem + 15vw);
-  height: 40vh;
-  display: flex;
-
-  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: start;
+  padding-top: 3rem;
 `;
+
 const Rotate = styled.span`
   display: block;
   position: fixed;
@@ -38,6 +39,16 @@ const Rotate = styled.span`
   width: 80px;
   height: 80px;
   z-index: 1;
+  animation: rotate 6s linear infinite;
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 `;
 
 // Framer-motion Configuration
@@ -45,34 +56,14 @@ const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 0.3,
       duration: 0.5,
     },
   },
 };
 
 const WorkPage = () => {
-  const ref = useRef(null);
-  const yinyang = useRef(null);
-
-  useEffect(() => {
-    let element = ref.current;
-
-    const rotate = () => {
-      element.style.transform = `translateX(${-window.pageYOffset}px)`;
-
-      return (yinyang.current.style.transform =
-        "rotate(" + -window.pageYOffset + "deg)");
-    };
-
-    window.addEventListener("scroll", rotate);
-    return () => {
-      window.removeEventListener("scroll", rotate);
-    };
-  }, []);
-
   return (
     <ThemeProvider theme={DarkTheme}>
       <Box>
@@ -80,18 +71,17 @@ const WorkPage = () => {
         <SocialIcons theme="dark" />
         <PowerButton />
 
-        <Main ref={ref} variants={container} initial="hidden" animate="show">
+        <BigTitlte text="WORK" top="2%" right="10%" />
+
+        <Main variants={container} initial="hidden" animate="show">
           {Work.map((d) => (
             <Card key={d.id} data={d} />
           ))}
         </Main>
-        <Rotate ref={yinyang}>
+
+        <Rotate>
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
-
-        <BigTitlte text="WORK" top="1%" right="10%" />
-
-        <BigTitlte text="scroll" top="40%" right="73%" />
       </Box>
     </ThemeProvider>
   );
