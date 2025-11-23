@@ -234,7 +234,8 @@ const Main = () => {
                 {/* rotating logo */}
                 <Center click={click}>
                     <img src={signature} alt='signature' onClick={() => handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                    <span>click here</span>
+                    <span>click here ☝️</span>
+                    <h3>Code is like humor. When you have to explain it, it’s bad.</h3>
                 </Center>
 
                 <Contact target="_blank" href="mailto:munaimunz@gmail.com">
