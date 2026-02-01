@@ -9,17 +9,7 @@ import restaurant from "../assets/project-images/Screenshot 2025-11-12 193031.pn
 // work data
 
 export const Work = [
-    {
-        id: 1,
-        name: "Complete E-commerce",
-        image: complete_ecom,
-        description: "Implemented product categorization, a dynamic cart system for adding and removing items, add to favorite section and a user authentication system for secure login. Integrated a payment system.",
-        tags: ["react", "redux", "firebase", "axios", "zustand", "react-paginate"],
-
-        demo: "https://complete-e-commerce-7v1b.vercel.app/",
-        github: "https://github.com/Munaimun/Complete_E-commerce"
-    },
-    {
+     {
         id: 2,
         name: "Ai-Powered Chatbot- InteliTalk",
         description: "Created a chatbot application that utilizes Axios to handle API requests for seamless data fetching from the backend and implements secure user authorization using JWT. A streamlined chat interface for accessing university information, complemented by an admin panel for efficient database management.",
@@ -29,6 +19,16 @@ export const Work = [
         demo: "https://iteli-talk-client.vercel.app/",
         github: "https://github.com/Munaimun/IteliTalk-client"
 
+    },
+    {
+        id: 1,
+        name: "Complete E-commerce",
+        image: complete_ecom,
+        description: "Implemented product categorization, a dynamic cart system for adding and removing items, add to favorite section and a user authentication system for secure login. Integrated a payment system.",
+        tags: ["react", "redux", "firebase", "axios", "zustand", "react-paginate"],
+
+        demo: "https://complete-e-commerce-7v1b.vercel.app/",
+        github: "https://github.com/Munaimun/Complete_E-commerce"
     },
     {
         id: 3,

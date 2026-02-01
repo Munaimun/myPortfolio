@@ -18,17 +18,34 @@ const Box = styled.div`
   min-height: 100vh;
   width: 100%;
   position: relative;
-  padding: 5rem 2rem;
+  /* Adjust padding for mobile */
+  padding: 6rem 1rem; 
+
+  @media (min-width: 768px) {
+    padding: 5rem 2rem;
+  }
 `;
 
-// Grid layout for cards
 const Main = styled(motion.ul)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
-  align-items: start;
-  padding-top: 3rem;
+  /* Default: 1 column for mobile */
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  list-style: none;
+  justify-items: center; /* Centers the cards when they wrap */
+
+  /* Tablet: 2 columns */
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Desktop: 3 columns */
+  @media (min-width: 1100px) {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px; /* Limits the row width so 3 cards look compact */
+    margin: 0 auto;
+  }
 `;
 
 const Rotate = styled.span`
@@ -36,18 +53,21 @@ const Rotate = styled.span`
   position: fixed;
   right: 1rem;
   bottom: 1rem;
-  width: 80px;
-  height: 80px;
+  width: 60px; // Smaller on mobile
+  height: 60px;
   z-index: 1;
   animation: rotate 6s linear infinite;
 
+  @media (min-width: 768px) {
+    width: 80px;
+    height: 80px;
+    right: 2rem;
+    bottom: 2rem;
+  }
+
   @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
 `;
 
