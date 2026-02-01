@@ -130,52 +130,59 @@ transition: height 0.5s ease, width 1s ease 0.5s;
 const Profiles = styled.div`
   position: absolute;
   top: 3rem;
-  left: 11rem; // you might adjust this for smaller screens
+  left: 11rem; 
   display: flex;
-  gap: 1rem;
-  z-index: 1;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 5; /* Increased to stay above other elements */
 
   a {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    color: ${props => props.theme.text};
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 12px;
+    transition: all 0.3s ease;
 
     img {
-      width: 100%;
-      max-width: 70px; // max size for larger screens
-      height: auto;    // maintain aspect ratio
-    }
-
-    &:hover {
-      transform: scale(1.1);
-      transition: 0.3s ease;
+      width: auto;
+      height: 15px;
+      filter: ${props => props.click ? 'invert(1)' : 'none'};
     }
   }
 
-  // Responsive adjustments
+  /* Tablets and Small Laptops */
+  @media (max-width: 1024px) {
+    left: 8rem;
+    gap: 1rem;
+    img {
+      height: 20px;
+    }
+  }
+
+  /* Tablets / Mobile Landscape */
   @media (max-width: 768px) {
+    top: 6rem;
     left: 2rem;
-    gap: 0.5rem;
-
-    a img {
-      max-width: 50px;
-    }
+    gap: 1rem;
   }
 
+  /* Mobile Portrait */
   @media (max-width: 480px) {
-    top: 2rem;
-    flex-direction: column;
-    gap: 0.5rem;
+    top: 5.5rem;
+    left: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
 
     a img {
-      max-width: 40px;
+      height: 18px;
+    }
+    
+    /* Make the third item span two columns if you want a centered look */
+    & > :last-child {
+        grid-column: span 2;
+        justify-self: start;
     }
   }
-`
+`;
 
 
 

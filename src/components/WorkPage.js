@@ -33,7 +33,7 @@ const Main = styled(motion.ul)`
   gap: 2rem;
   padding: 4rem 2rem;
   list-style: none;
-  justify-items: center; /* Centers the cards when they wrap */
+  justify-items: center;
 
   /* Tablet: 2 columns */
   @media (min-width: 700px) {
@@ -43,7 +43,7 @@ const Main = styled(motion.ul)`
   /* Desktop: 3 columns */
   @media (min-width: 1100px) {
     grid-template-columns: repeat(3, 1fr);
-    max-width: 1200px; /* Limits the row width so 3 cards look compact */
+    max-width: 1200px; 
     margin: 0 auto;
   }
 `;
@@ -53,7 +53,7 @@ const Rotate = styled.span`
   position: fixed;
   right: 1rem;
   bottom: 1rem;
-  width: 60px; // Smaller on mobile
+  width: 60px;
   height: 60px;
   z-index: 1;
   animation: rotate 6s linear infinite;
