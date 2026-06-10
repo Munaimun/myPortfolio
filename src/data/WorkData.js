@@ -1,7 +1,7 @@
 import complete_ecom from "../assets/project-images/complete-ecommerce.png"
 import intelitalk from "../assets/project-images/intelitalk.png"
 import top_course from "../assets/project-images/topcourses.png"
-import viewfinder from "../assets/project-images/viewfinder.jpg"
+import viewfinder from "../assets/project-images/viewfinder.png"
 import quiz from "../assets/project-images/quiz.jpg"
 import hospital from "../assets/project-images/hospital.png"
 import restaurant from "../assets/project-images/Screenshot 2025-11-12 193031.png"
@@ -21,6 +21,17 @@ export const Work = [
 
     },
     {
+        id: 5,
+        name: "ViewFinder - Tour Packages Application",
+        image: viewfinder,
+        description: "Developed a comprehensive Tour Packages Application, featuring detailed information on various tourist destinations. Implemented a user-friendly interface to showcase package details.",
+        tags: ["react", "tailwind", "react-toast"],
+
+        demo: "https://tour-planner-steel.vercel.app/",
+        github: "https://github.com/Munaimun/Tour-Planner"
+
+    },
+     {
         id: 1,
         name: "Complete E-commerce",
         image: complete_ecom,
@@ -41,17 +52,6 @@ export const Work = [
         github: "https://github.com/Munaimun/TopCourses"
     },
     {
-        id: 5,
-        name: "ViewFinder - Tour Packages Application",
-        image: viewfinder,
-        description: "Developed a comprehensive Tour Packages Application, featuring detailed information on various tourist destinations. Implemented a user-friendly interface to showcase package details.",
-        tags: ["react", "tailwind", "react-toast"],
-
-        demo: "https://view-finder-nine.vercel.app/",
-        github: "https://github.com/Munaimun/ViewFinder"
-
-    },
-    {
         id: 6,
         name: "Quiz App",
         image: quiz,
@@ -63,7 +63,7 @@ export const Work = [
 
     },
     {
-        id: 6,
+        id: 7,
         name: "Hospital Website",
         image: hospital,
         description: "Developed a modern and responsive hospital website with an intuitive user interface. The platform includes features like doctor listings, appointment booking, patient management, and service details.",
@@ -74,7 +74,7 @@ export const Work = [
 
     },
     {
-        id: 7,
+        id: 8,
         name: "Restaurant Website",
         image: restaurant, // make sure to import your image at the top like: import restaurant from "../assets/project-images/restaurant.png"
         description: "Developed a responsive restaurant website where users can explore the full menu, book tables, and place online food orders. Integrated smooth navigation, engaging UI animations, and a seamless ordering flow to enhance the dining experience.",
