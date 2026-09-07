@@ -1,22 +1,22 @@
 # 🌐 Munaimun Bari Fahad - Personal Portfolio
 
-Welcome to my portfolio repository! 🚀 This project showcases my skills, projects, and experience as a **Software Developer** with expertise in **React.js, JavaScript, and modern web technologies.**
+Welcome to my portfolio repository! 🚀 This project showcases my skills, projects, and experience as a **Software Developer** with expertise in **MERN, and modern web technologies.**
 
 ---
 
 ## 🧑‍💻 About Me
 
-I am **Munaimun Bari Fahad**, a passionate Software Engineer with a strong foundation in **Frontend Developer** with a strong foundation in **React.js, JavaScript, and UI/UX principles**. I have experience in building dynamic web applications, integrating APIs, and optimizing performance for better user experiences.
+I am **Munaimun Bari Fahad**, a passionate Software Engineer with a strong foundation in **MERN, and UI/UX principles**. I have experience in building dynamic web applications, integrating APIs, and optimizing performance for better user experiences.
 
-🔹 **Languages:** C++, C, JavaScript, TypeScript
+🔹 **Languages:** JavaScript, TypeScript, C++, Python
 
-🔹 **Frameworks & Libraries:** React.js, Next.js, JavaScript (ES6+), Tailwind CSS, Firebase, REST APIs
+🔹 **Frameworks & Libraries:** React.js, Next.js, Node.js, Express.js, JavaScript (ES6+), Tailwind CSS, REST APIs
 
-🔹 **Other Skills:** Problem-Solving, Data Structures & Algorithms, Design-Patterns, UI/UX Design
+🔹 **Other Skills:** Problem-Solving, Data Structures & Algorithms, OOP, Design-Patterns, UI/UX Design
 
 🔹 **Databases:** MySQL, MongoDB, Firebase
 
-🔹 **Tools & Others:** DSA, OOP, Git, GitHub, Tailwind CSS
+🔹 **Tools & Others:** Redux, Context API, Git, GitHub, Tailwind CSS
 
 ---
 
@@ -28,12 +28,15 @@ I am **Munaimun Bari Fahad**, a passionate Software Engineer with a strong found
 
 ## 💼 Work Experience
 
-### **Frontend Software Developer (Intern) - Nobleroot Ltd.** _(June 2024 – August 2024)_
+### **Software Developer (Intern) - Nobleroot Ltd.** _(June 2024 – August 2024)_
 
-- Optimized API responses and database queries, reducing load time by **30%**.
-- Enhanced the UI/UX, increasing user engagement by **25%**.
-- Developed features to fetch data from the backend and display solutions for various skin problems.
-- **Tech Stack:** React, REST APIs, Jira
+- Developed a full-stack travel planning web app using React.js, Node.js, Express.js, and MySQL, letting
+users explore destinations with day-by-day itineraries, cost breakdowns, and optimal travel windows.
+- Built a smart recommendation engine that collects trip length, group size, and budget, then serves personalized
+tour packages via a custom REST API backed by a normalized MySQL schema.
+- Architected scalable frontend state and routing with React Context API and React Router v6, keeping the
+codebase maintainable as new features and pages were added.
+- **Tech Stack:** MERN, Jira
 
 ### **Projects**
 
