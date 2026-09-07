@@ -1,17 +1,16 @@
-import React from 'react'
-import styled, { ThemeProvider } from 'styled-components'
-import { lightTheme } from './Themes';
-import { Develope } from './AllSvgs';
+import React from "react";
+import styled, { ThemeProvider } from "styled-components";
+import { lightTheme } from "./Themes";
+import { Develope } from "./AllSvgs";
 
-
-import LogoComponent from '../subComponents/LogoComponent';
-import SocialIcons from '../subComponents/SocialIcons';
-import PowerButton from '../subComponents/PowerButton';
-import ParticleComponent from '../subComponents/ParticleComponent';
-import BigTitle from '../subComponents/BigTitlte'
+import LogoComponent from "../subComponents/LogoComponent";
+import SocialIcons from "../subComponents/SocialIcons";
+import PowerButton from "../subComponents/PowerButton";
+import ParticleComponent from "../subComponents/ParticleComponent";
+import BigTitle from "../subComponents/BigTitlte";
 
 const Box = styled.div`
-  background-color: ${props => props.theme.body};
+  background-color: ${(props) => props.theme.body};
   width: 100vw;
   min-height: 100vh; /* Allows scrolling */
   position: relative;
@@ -27,12 +26,12 @@ const Box = styled.div`
     justify-content: flex-start;
     align-items: center;
   }
-`
+`;
 
 const Main = styled.div`
-  border: 2px solid ${props => props.theme.text};
-  color: ${props => props.theme.text};
-  background-color: ${props => props.theme.body};
+  border: 2px solid ${(props) => props.theme.text};
+  color: ${(props) => props.theme.text};
+  background-color: ${(props) => props.theme.body};
   padding: 2rem;
   width: 30vw;
   height: 60vh;
@@ -40,14 +39,14 @@ const Main = styled.div`
   line-height: 1.5;
   cursor: pointer;
 
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: "Ubuntu Mono", monospace;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   &:hover {
-    color: ${props => props.theme.body};
-    background-color: ${props => props.theme.text};
+    color: ${(props) => props.theme.body};
+    background-color: ${(props) => props.theme.text};
   }
 
   @media (max-width: 768px) {
@@ -57,135 +56,141 @@ const Main = styled.div`
     margin-top: 45px;
     margin-bottom: 2rem;
   }
-`
-
+`;
 
 const Title = styled.h2`
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: calc(1em + 1vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(1em + 1vw);
 
-${Main}:hover &{
-    &>*{
-        fill:${props => props.theme.body};
+  ${Main}:hover & {
+    & > * {
+      fill: ${(props) => props.theme.body};
     }
-}
+  }
 
-&>*:first-child{
-margin-right: 1rem;
-}
-`
+  & > *:first-child {
+    margin-right: 1rem;
+  }
+`;
 
 const Description = styled.div`
-color: ${props => props.theme.text};
-font-size: calc(0.6em + 1vw);
-padding: 0.5rem 0;
+  color: ${(props) => props.theme.text};
+  font-size: calc(0.6em + 1vw);
+  padding: 0.5rem 0;
 
+  ${Main}:hover & {
+    color: ${(props) => props.theme.body};
+  }
 
-${Main}:hover &{
-   
-        color:${props => props.theme.body};
-    
-}
-
-strong{
+  strong {
     margin-bottom: 1rem;
     text-transform: uppercase;
-}
-ul,p{
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Spacing between flex items */
+    list-style: none; /* Removes bullet points */
+    margin-left: 0;
+    padding-left: 0;
+  }
+  p {
     margin-left: 2rem;
-}
-`
+  }
+`;
 
 const MySkillsPage = () => {
-    return (
-        <ThemeProvider theme={lightTheme}>
-            <Box>
+  return (
+    <ThemeProvider theme={lightTheme}>
+      <Box>
+        <LogoComponent theme="light" />
+        <SocialIcons theme="light" />
+        <PowerButton />
+        <ParticleComponent theme="light" />
+        <Main>
+          <Title>Experties</Title>
 
-                <LogoComponent theme='light' />
-                <SocialIcons theme='light' />
-                <PowerButton />
-                <ParticleComponent theme='light' />
-                <Main>
-                    <Title>
-                        Experties
-                    </Title>
+          <Description>
+            I love to write code that is clear, simple, and powerful.
+          </Description>
 
-                    <Description>
-                        I love to write code that is clear, simple, and powerful.
-                    </Description>
+          <Description>
+            <strong>Languages</strong>
+            <ul>
+              <li>JavaScript, TypeScript, Python</li>
+            </ul>
+          </Description>
 
-                    <Description>
-                        <strong>Languages</strong>
-                        <ul>
-                            <li>
-                                JavaScript, TypeScript, Python
-                            </li>
-                        </ul>
-                    </Description>
+          <Description>
+            <strong>Databases</strong>
+            <ul>
+              <li>MongoDB, MySQL, Firebase</li>
+            </ul>
+          </Description>
 
-                    <Description>
-                        <strong>Databases</strong>
-                        <ul>
-                            <li>
-                                MySQL, Firebase, MongoDB
-                            </li>
-                        </ul>
-                    </Description>
+          <Description>
+            <strong>Problem Solving</strong>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/Munaimun/Problem_Solving"
+                  target="block"
+                >
+                  LeetCode
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.codechef.com/users/bruce_wayne23"
+                  target="block"
+                >
+                  CodeChef
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://codeforces.com/profile/munaimun_1948"
+                  target="block"
+                >
+                  Codeforces
+                </a>
+              </li>
+            </ul>
+          </Description>
+        </Main>
 
-                    <Description>
-                        <strong>Problem Solving</strong>
-                        <ul>
-                            <li>
-                                <a href='https://github.com/Munaimun/Problem_Solving' target='block'>LeetCode</a>
-                            </li>
-
-                        </ul>
-                    </Description>
-
-                </Main>
-
-
-                <Main>
-                    <Title>
-                        <Develope width={40} height={40} /> Frontend Developer
-                    </Title>
-                    {/* <Description>
+        <Main>
+          <Title>
+            <Develope width={40} height={40} /> Development
+          </Title>
+          {/* <Description>
                         I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
                     </Description> */}
-                    <Description>
-                        <strong>Skills</strong>
-                        <p>
-                            React.js, Next.js, HTML, CSS, Tailwind CSS, Bootstrap, Styled Components
-                        </p>
-                    </Description>
+          <Description>
+            <strong>Skills</strong>
+            <p>
+              React.js, Next.js, HTML, CSS, Tailwind CSS, Bootstrap, Styled
+              Components
+            </p>
+          </Description>
 
-                    <Description>
-                        <strong>Backend</strong>
-                        <p>
-                            REST APIs, Node.js(basic)
-                        </p>
-                    </Description>
+          <Description>
+            <strong>Backend</strong>
+            <p>Node.js, Express.js, REST APIs</p>
+          </Description>
 
+          <Description>
+            <strong>Tools & Platforms</strong>
+            <p>Context API, Redux, Git, GitHub, Jira, Figma</p>
+          </Description>
+        </Main>
 
-                    <Description>
-                        <strong>Tools & Platforms</strong>
-                        <p>
-                            Context API, Redux, Git, GitHub, Jira, Figma
-                        </p>
-                    </Description>
+        <BigTitle text="SKILLS" top="80%" right="30%" />
+      </Box>
+    </ThemeProvider>
+  );
+};
 
-
-                </Main>
-
-                <BigTitle text="SKILLS" top="80%" right="30%" />
-
-            </Box>
-
-        </ThemeProvider>
-
-    )
-}
-
-export default MySkillsPage
+export default MySkillsPage;
